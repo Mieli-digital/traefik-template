@@ -17,7 +17,6 @@
     email = "vuong@mieli.de"
     storage = "acme.json" 
     [certificatesResolvers.lets-encrypt.acme.tlsChallenge]
-        entryPoint = "web"
 ## configure traefik as proxy for docker 
 [providers.docker]
     watch = true
