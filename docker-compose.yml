@@ -14,9 +14,9 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - traefik-config/acme.json:/acme.json
-      - traefik-config/traefik_dynamic.toml:/traefik_dynamic.toml
-      - traefik-config/traefik.toml:/traefik.toml
+      - ./traefik-config/acme.json:/acme.json
+      - ./traefik-config/traefik_dynamic.toml:/traefik_dynamic.toml
+      - ./traefik-config/traefik.toml:/traefik.toml
       ### low security, only use in develop environment https://doc.traefik.io/traefik/providers/docker/#docker-api-access
       ### using tcp or ssh connection to docker.sock
       ### docker.sock is needed to listen to changes to containers
