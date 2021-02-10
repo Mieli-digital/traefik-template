@@ -17,7 +17,10 @@
     email = "vuong@mieli.de"
     storage = "acme.json" 
     [certificatesResolvers.lets-encrypt.acme.tlsChallenge]
-## configure traefik as proxy for docker and auto discovery
+## configure traefik as proxy for docker 
 [providers.docker]
     watch = true
     network = "web"
+## enable auto discovery of docker containers
+[providers.file]
+  filename = "traefik_dynamic.toml"
