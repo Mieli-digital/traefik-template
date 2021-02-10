@@ -6,7 +6,7 @@
     ]
 ## rerouting to secure connection using letsencyrpt for api/dashboard service
 [http.routers.api]
-    rule = "Host(`mieli.loca.lt`)"
+    rule = "Host(`hostingtest.mieli.de`)"
     entrypoints = ["websecure"]
     middlewares = ["simpleAuth"]
     service = "api@internal"

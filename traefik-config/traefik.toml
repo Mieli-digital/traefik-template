@@ -23,4 +23,4 @@
     network = "web"
 ## enable auto discovery of docker containers
 [providers.file]
-  filename = "traefik_dynamic.toml"
+    filename = "traefik_dynamic.toml"
