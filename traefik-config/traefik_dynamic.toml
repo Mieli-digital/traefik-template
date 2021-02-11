@@ -1,14 +1,6 @@
 # traefik dynamic config
-## basic auth
-[http.middlewares.simpleAuth.basicAuth]
-    users = [
-        "admin:$apr1$qkqDrfa3$B1SaX6lj/8g9OZsW7.TeE0"
-    ]
 ## rerouting to secure connection using letsencyrpt for api/dashboard service
 [http.routers.api]
-    rule = "Host(`hostingtest.mieli.de`)" ### set domain for dashboard here
-    entrypoints = ["websecure"]
-    middlewares = ["simpleAuth"]
+    rule = "Host(`dashboard.localhost`)" ### set domain for dashboard here
+    entrypoints = ["web"]
     service = "api@internal"
-    [http.routers.api.tls]
-        certResolver = "lets-encrypt"
